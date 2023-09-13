@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>The One and Only Job Database</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8c8c34f5fd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container text-center">  
+      <div class="row">
+        <h1 class="col display-2">The One and Only Job Database</h1>
+      </div>
+      <div class="row">
+        <p class="text-center lead col-7">Welcome to the job database! We currently have six jobs in our database: surgeon, professor, lawyer, engineer, pilot and Java developer. We also list their education/degree requirements and salary. Click one of the buttons below to get started!</p>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="dropdown col">
+          <button class="btn btn-primary dropdown-toggle" type="button"    id="dropDownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item btn-outline-danger" onclick="getJobInfo()" id="btn1" type="button" type="button"><i class="fas fa-search"></i> Search for Job Info</button>
+            <button class="dropdown-item btn-outline-warning" onclick="addJob()" id="btn2" type="button" type="button"><i class="fas fa-search"></i> Add a Job to Our Database</button>
+            <button class="dropdown-item btn-outline-success" onclick="remove()" id="btn3" type="button" type="button"><i class="fas fa-search"></i> Remove a Job From Our Database</button>
+            <button class="dropdown-item btn-outline-info" onclick="listAllInfo()" id="btn4" type="button" type="button"><i class="fas fa-search"></i> See All Jobs in Our Database</button>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" id="result">
+            See your results!
+          </button>
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title text-muted" id="exampleModalCenterTitle">Your search result:</h4>
+                </div>
+                <div class="modal-body" id="maintext" onclick="clearField()" title="Click to Remove">
+                  Uh oh ... you currently have no results.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <p>
+        <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <small>About This Webpage</small>
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <em>This webpage was designed to make use of Javascript arrays and objects. It was initially styled using HTML and CSS. As of March 5, 2020, most elements have been converted to Bootstrap when possible/appealing to the visitor. Changes may still be implemented; last updated 3/6/2020 at 18:39:36 UTC.</em><br><br>
+          <small class="text-capitalize">made with bootstrap!</small>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
